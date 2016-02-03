@@ -2,20 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Observador Watch</title>
+    <title>Observador Watch Group</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>
 <body data-ng-app="app">
     <div data-ng-controller="Controlador" class="container">
-        <h1>Observadores Watch</h1>
+        <h1>Observadores Watch Group</h1>
         <form method="post" class="form-horizontal">
             <div class="form-group">
-                <div class="col-sm-2">Contraseña</div>
+                <div class="col-sm-2">Contraseña:</div>
                 <div class="col-sm-4"><input type="password" class="form-control" data-ng-model="password"></div>
             </div>
             <div class="form-group">
-                <p data-ng-bind="password"></p>
-                <div data-ng-show="errorMinimo" class="col-sm-12">Error: No cumple con el minimo de caracteres (6)</div>
+                <div class="col-sm-2">Rectificar:</div>
+                <div class="col-sm-4"><input type="password" class="form-control" data-ng-model="password2"></div>
+            </div>
+            <div class="form-group">
+                <div data-ng-hide="coincidencia" class="col-sm-12">Error: Las contraseñas no coinciden</div>
             </div>
         </form>
     </div>

@@ -1,13 +1,13 @@
 angular.module("app",[])
     .controller('Controlador',function($scope){
-        $scope.errorMinimo = false;
+        $scope.coincidencia = false;
 
-        $scope.$watch('password',function(nuevo, anterior){
-            if (!nuevo) return;
-            if(nuevo.length < 6){
-                $scope.errorMinimo = true;
+        $scope.$watchGroup(['password','password2'],function(nuevos, anteriores){
+            if (!nuevos) return;
+            if(nuevos[0]===nuevos[1]){
+                $scope.coincidencia = true;
             }else{
-                $scope.errorMinimo = false;
+                $scope.coincidencia = false;
             }
         })
     });
