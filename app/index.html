@@ -5,12 +5,12 @@
     <title>Angular js</title>
 </head>
 <body>
-    <div class="container" data-ng-controller="PlaylistCtrl">
+    <div class="container" data-ng-controller="PlaylistServiceCtrl">
         <ul>
             <li data-ng-repeat="titulo in playlist">{{titulo}}</li>
         </ul>
     </div>
-    <div data-ng-controller="PlaylistMetodosCtrl">
+    <div data-ng-controller="PlaylistMetodosServiceCtrl">
         <ul>
             <li data-ng-repeat="titulo in playlist">
                 {{titulo}}
@@ -20,8 +20,8 @@
     </div>
     <script type="text/javascript" src="js/angular.min.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/Services/Playlist.js"></script>
-    <script src="js/Controllers/PlaylistCtrl.js"></script>
-    <script src="js/Controllers/PlaylistMetodosCtrl.js"></script>
+    <script src="js/Services/PlaylistService.js"></script>
+    <script src="js/Controllers/PlaylistServiceCtrl.js"></script>
+    <script src="js/Controllers/PlaylistMetodosServiceCtrl.js"></script>
 </body>
 </html>
