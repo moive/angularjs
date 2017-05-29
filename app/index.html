@@ -8,13 +8,13 @@
 <body>
     <div class="container">
         <h1>My first App</h1>
-        <div data-ng-controller="PlaylistServiceCtrl">
+        <div data-ng-controller="PlaylistProviderCtrl">
             <ul>
                 <li data-ng-repeat="titulo in playlist">{{titulo}}</li>
             </ul>
         </div>
         <hr>
-        <div data-ng-controller="PlaylistMetodosServiceCtrl">
+        <div data-ng-controller="PlaylistMetodosProviderCtrl">
             <ol>
                 <li data-ng-repeat="titulo in playlist">
                     {{titulo}}
@@ -25,8 +25,9 @@
     </div>
     <script type="text/javascript" src="js/angular.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/Services/PlaylistService.js"></script>
-    <script src="js/Controllers/PlaylistServiceCtrl.js"></script>
-    <script src="js/Controllers/PlaylistMetodosServiceCtrl.js"></script>
+    <script src="js/Config/Playlist.js"></script>
+    <script src="js/Services/PlaylistProvider.js"></script>
+    <script src="js/Controllers/PlaylistProviderCtrl.js"></script>
+    <script src="js/Controllers/PlaylistMetodosProviderCtrl.js"></script>
 </body>
 </html>
