@@ -4,4 +4,11 @@ angular.module('miApp')
         $scope.borrar = function(id){
             Playlist.borrar(id);
         };
+
+        $scope.countSongs = 0;
+
+        $scope.$watch(function(){
+        	var l = Playlist.listar().length;
+        	$scope.countSongs = l == 0 ? 'No hay datos' : l;
+        })
     }]);

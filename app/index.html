@@ -10,17 +10,19 @@
         <h1>My first App</h1>
         <div data-ng-controller="PlaylistProviderCtrl">
             <ul>
-                <li data-ng-repeat="titulo in playlist">{{titulo}}</li>
+                <li data-ng-repeat="titulo in playlist"> <span ng-bind="titulo"></span></li>
             </ul>
         </div>
         <hr>
         <div data-ng-controller="PlaylistMetodosProviderCtrl">
             <ol>
                 <li data-ng-repeat="titulo in playlist">
-                    {{titulo}}
+                    <span ng-bind="titulo"></span>
                     <a href="#" class="button" data-ng-click="borrar($index); $event.preventDefault();">&times;</a>
                 </li>
             </ol>
+            <hr>
+            <div><small ng-bind="countSongs"></small></div>
         </div>
     </div>
     <script type="text/javascript" src="js/angular.js"></script>
