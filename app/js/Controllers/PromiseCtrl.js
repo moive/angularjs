@@ -76,15 +76,16 @@ angular.module('miApp')
 }])
 .controller('AppCtrl',['$scope', '$q', function($scope, $q){
 	function tarea(comprobar){
-		var dfd = $q.defer();
-		setTimeout(function(){
-			if (!comprobar){
-				dfd.resolve('Promesa resuelta');
-			}else{
-				dfd.reject('Promesa rechazada');
-			}
-		},1000);
-		return dfd.promise;
+		return $q(function(reject,resolve){
+			setTimeout(function(){
+				if (!comprobar){
+					resolve('Promesa resuelta');
+				}else{
+					reject('Promesa rechazada');
+				}
+			},1000);
+		});
+
 	}
 
 	$scope.accion = ejecutar;
