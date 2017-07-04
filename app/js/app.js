@@ -1,3 +1,6 @@
 'use-strict';
 
-angular.module('miApp', []);
+angular.module('miApp', [])
+.run(['$anchorScroll', function($anchorScroll){
+	$anchorScroll.yOffset = 50;
+}]);

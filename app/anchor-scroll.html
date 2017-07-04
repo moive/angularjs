@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="miApp" ng-strict-di>
+<head>
+	<meta charset="UTF-8">
+	<title>Anchor scroll</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<style>
+		.contenido {height:800px;}
+		#contenido1{background-color:#1ABC9C;}
+		#contenido2{background-color:#3498DB;}
+		#contenido3{background-color:#9B59B6;}
+		#contenido4{background-color:#E74C3C;}
+	</style>
+</head>
+<body>
+	<div class="container" ng-controller="AnchorScroll">
+		<h1>Anchor Scroll</h1>
+		<a href="" ng-click="goTo(1)">Contenido 1</a>
+		<a href="" ng-click="goTo(2)">Contenido 2</a>
+		<a href="" ng-click="goTo(3)">Contenido 3</a>
+		<a href="" ng-click="goTo(4)">Contenido 4</a>
+		<div class="contenido" id="contenido1">Contenido 1</div>
+		<div class="contenido" id="contenido2">Contenido 2</div>
+		<div class="contenido" id="contenido3">Contenido 3</div>
+		<div class="contenido" id="contenido4">Contenido 4</div>
+	</div>
+	<script type="text/javascript" src="js/angular.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/Controllers/AnchorScroll.js"></script>
+</body>
+</html>
