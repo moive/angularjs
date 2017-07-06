@@ -1,21 +1,21 @@
 angular.module('miApp')
-.controller('TimeoutCtrl',['$scope','$timeout', function($scope, $timeout){
+.controller('TimeoutCtrl',['$scope','$timeout','$log', function($scope, $timeout, $log){
 	var vm = this;
 	var retraso = $timeout(Action, 3000, true, 'Uno', 'Dos');
 
 	function Action(param1, param2){
-		console.log('Ejecutado después de dos segundos.');
-		console.log('Parámetros: ', param1, param2);
+		$log.warn('Ejecutado después de dos segundos.');
+		$log.log('Parámetros: ', param1, param2);
 		return 'Mensaje devuelto por el temporizador.';
 	}
 
 	retraso.then(function(msg){
-		console.log(msg);
-		console.log('Retraso finalizado');
+		$log.log(msg);
+		$log.debug('Retraso finalizado');
 	});
 
 	retraso.catch(function(){
-		console.log('Retraso cancelado.');
+		$log.error('Retraso cancelado.');
 	});
 
 	vm.cancelar = function(){
