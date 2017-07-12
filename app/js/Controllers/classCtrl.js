@@ -8,4 +8,6 @@ angular.module('miApp')
 	$scope.styles = styles;
 	
 	$scope.etiquetas = ['Actualidad', 'Finanzas', 'Tecnología'];
+	
+	$scope.message = 'Hi from the controller.';
 }]);
