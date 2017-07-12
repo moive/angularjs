@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" data-ng-app="miApp" data-ng-strict-di>
+<head>
+    <meta charset="UTF-8">
+    <title>Angular js</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style type="text/css">
+		.square{height: 100px; width: 100px;}
+		.flotar{float:right; padding:0 10px;}
+		.fondoRojo{background-color:red;}
+		.bordesRedondeados{border: 2px solid black; border-radius: 10px;}
+	</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Directivas</h1>
+        <div ng-controller="classCtrl">
+        	<div class="square" ng-class="generateClass()"></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/Controllers/classCtrl.js"></script>
+</body>
+</html>
