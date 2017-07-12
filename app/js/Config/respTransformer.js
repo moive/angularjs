@@ -7,7 +7,6 @@ angular.module('miApp')
 			"email": "junior@example.com",
 			"languajes": ["es"]
 		});
-		console.log(data);
 		return data;
 	});
 }]);
