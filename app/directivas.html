@@ -29,13 +29,38 @@
         	<br>
         	<div>
         		Etiquetas: <input type="text" ng-model="etiquetas" ng-list>
-        		<ol>
+        		<ul>
         			<li>Debug: {{etiquetas}}</li>
-        		</ol>
+        		</ul>
         	</div>
         	<br>
         	<div>{{message}}</div>
         	<div ng-non-bindable>No se muestra mensaje: {{message}}</div>
+        	<br>
+        	<h3>Listado de compra.</h3>
+        	<div>Buscar: <input type="text" ng-model="buscar"></div>
+        	<ol>
+        		<li ng-repeat="compra in musica | filter:buscar">
+        			<strong>Artista:</strong> {{compra.artista}}<br>
+        			<strong>CD: </strong> {{compra.cd}}
+        		</li>
+        	</ol>
+        	<br>
+        	<h3>Songs of Innocence</h3>
+        	<table>
+        		<thead>
+        			<tr>
+        				<th>Títutlo</th>
+        				<th>Duración</th>
+        			</tr>
+        		</thead>
+        		<tbody>
+        			<tr ng-repeat="(titulo, tiempo) in playlist">
+        				<td>{{titulo}}</td>
+        				<td>{{tiempo}}</td>
+        			</tr>
+        		</tbody>
+        	</table>
         </div>
     </div>
     <script type="text/javascript" src="js/angular.js"></script>
