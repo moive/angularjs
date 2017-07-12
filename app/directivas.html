@@ -5,17 +5,27 @@
     <title>Angular js</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <style type="text/css">
-		.square{height: 100px; width: 100px;}
+		.square{min-height: 100px; min-width: 100px; display:inline-block;}
 		.flotar{float:right; padding:0 10px;}
 		.fondoRojo{background-color:red;}
-		.bordesRedondeados{border: 2px solid black; border-radius: 10px;}
+		.bordesRedondeados{border: 1px solid black; border-radius: 10px;}
 	</style>
 </head>
 <body>
     <div class="container">
         <h1>Directivas</h1>
         <div ng-controller="classCtrl">
-        	<div class="square" ng-class="generateClass()"></div>
+        	<div class="square" ng-class="{
+        		'flotar': flotar,
+        		'fondoRojo':fondoRojo,
+        		'bordesRedondeados':bordesRedondeados}">
+        		<span>Ejemplo de los usos de ng-class</span>
+				<div>
+					<input type="checkbox" ng-model="flotar"> Flotar <br>
+					<input type="checkbox" ng-model="fondoRojo"> Fondo Rojo <br>
+					<input type="checkbox" ng-model="bordesRedondeados"> Border Redondeados <br>
+				</div>
+        	</div>
         </div>
     </div>
     <script type="text/javascript" src="js/angular.js"></script>
