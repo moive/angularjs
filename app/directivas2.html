@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" data-ng-app="miApp" data-ng-strict-di>
+<head>
+    <meta charset="UTF-8">
+    <title>Angular js</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style type="text/css">
+		.primera{color:#FF7567;}
+		.medio{color:#4AAB30;}
+		.ultima{color:orange;}
+		.par{text-decoration: underline;}
+		.impar{font-weight:bold;}
+	</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Directivas</h1>
+        <div ng-controller="directivasCtrl">
+        	<div>
+        		Buscar: <input type="text" ng-model="buscar">
+        	</div>
+        	<div>
+        		<div ng-repeat="cd in cds | filter:buscar" ng-class="{
+        			'primera': $first,
+        			'medio': $middle,
+        			'ultima': $last,
+        			'par': $even,
+        			'impar': $odd}">
+        			{{$index+1}} - {{cd}}
+        		</div>
+        	</div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/Controllers/directivasCtrl.js"></script>
+</body>
+</html>
