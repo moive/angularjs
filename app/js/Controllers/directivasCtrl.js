@@ -57,4 +57,9 @@ angular.module('miApp')
 	$scope.over = function(e){
 		$log.log('Ejecutando el evento Mouseover');
 	}
+	
+	$scope.usuario = {nombre: '', contrasena:''};
+	$scope.login = function(){
+		$log.log($scope.usuario);
+	};
 }]);

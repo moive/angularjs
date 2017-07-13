@@ -36,7 +36,8 @@
 			</div>
       		<br>
        		<div>
-       			<input type="text" ng-keydown="keydown($event)" ng-keypress="keypress($event)" ng-keyup="keyup($event)">
+       			<input type="checkbox" ng-model="habilitado">
+       			<input type="text" ng-keydown="keydown($event)" ng-keypress="keypress($event)" ng-keyup="keyup($event)" ng-disabled="!habilitado">
        		</div>
        		<br>
        		<div ng-style="style"
@@ -46,6 +47,18 @@
        			ng-mouseleave="leave()"
        			ng-mousemove="move($event)"
        			ng-mouseover="over()">{{pos}}</div>
+       		<form ng-submit="login()" style="max-width: 70%;">
+       			<h3>Login</h3>
+       			<div>
+       				Nombre: <input type="text" ng-model="usuario.nombre" class="form-control">
+       			</div>
+       			<div>
+       				Contraseña: <input type="password" ng-model="usuario.contrasena" class="form-control">
+       			</div>
+       			<div style="margin:10px 0 0;">
+       				<button type="submit" class="btn">Aceptar</button>
+       			</div>
+       		</form>
         </div>
     </div>
     <script type="text/javascript" src="js/angular.js"></script>
