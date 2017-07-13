@@ -14,7 +14,8 @@ angular.module('miApp')
 }])
 .directive('miMensaje',[function(){
 	var plantilla = '<div class="alert-{{tipo}}"';
-	plantilla += '<h2>{{titulo}}</h2><p>{{mensaje}}</p></div>';
+	plantilla += '<h2>{{titulo}}</h2><p>{{mensaje}}</p>';
+	plantilla += '<input type="text" data-ng-model="mensaje"></div>';
 	
 	return {
 		restric: 'EA',

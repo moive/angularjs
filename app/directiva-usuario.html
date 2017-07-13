@@ -18,10 +18,11 @@
         	<div data-info data-usuario="usuario2"></div>
         	<br>
         	<div>
+        		Mensaje: <input type="text" data-ng-model="mensaje">
 				<mi-mensaje
 					titulo="Error"
 					tipo="warning"
-					mensaje="Erro 404, El contenido que usted busca no ha sido encontrado.">
+					mensaje="{{mensaje}}">
 				</mi-mensaje>
         	</div>
         </div>
