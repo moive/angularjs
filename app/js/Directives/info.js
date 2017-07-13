@@ -5,7 +5,10 @@ angular.module('miApp')
 	
 	return {
 		restric: 'A',
+		scope: {
+			usuario: '=usuario'
+		},
 		template: plantilla,
-		replace: true
+		replace: false
 	};
 }]);

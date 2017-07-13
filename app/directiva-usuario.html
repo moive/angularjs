@@ -11,7 +11,11 @@
     <div class="container">
         <h1>Directivas</h1>
         <div ng-controller="UsuariosCtrl">
-        	<div data-info></div>
+        	<div>
+        		<input type="text" ng-model="usuario1.nombre">
+        	</div>
+        	<div data-info data-usuario="usuario1"></div>
+        	<div data-info data-usuario="usuario2"></div>
         </div>
     </div>
     <script type="text/javascript" src="js/angular.js"></script>
