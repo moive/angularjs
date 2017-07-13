@@ -29,6 +29,11 @@
         			{{$index+1}} - {{cd}}
         		</div>
         	</div>
+			<br>
+			<div>
+				<input type="checkbox" ng-model="mostrar"> Mostrar bienvenida.
+				<p ng-if="mostrar">Bienvenido al mundo de <strong>AngularJS</strong></p>
+			</div>
         </div>
     </div>
     <script type="text/javascript" src="js/angular.js"></script>

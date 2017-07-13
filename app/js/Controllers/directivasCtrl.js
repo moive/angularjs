@@ -12,4 +12,6 @@ angular.module('miApp')
 	];
 	
 	$scope.cds = cds;
+	
+	$scope.mostrar = true;
 }]);
