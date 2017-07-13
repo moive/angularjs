@@ -11,4 +11,19 @@ angular.module('miApp')
 		template: plantilla,
 		replace: false
 	};
+}])
+.directive('miMensaje',[function(){
+	var plantilla = '<div class="alert-{{tipo}}"';
+	plantilla += '<h2>{{titulo}}</h2><p>{{mensaje}}</p></div>';
+	
+	return {
+		restric: 'EA',
+		scope: {
+			tipo: '@',
+			titulo: '@',
+			mensaje: '@'
+		},
+		template: plantilla,
+		replace: true
+	};
 }]);
