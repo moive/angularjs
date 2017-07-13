@@ -3,6 +3,6 @@ angular.module('miApp')
 	return {
 		restrict: 'EAC',
 		template: '<p>Esta es la primera directiva.</p>',
-		replace: true
+		replace: false
 	};
 }]);
