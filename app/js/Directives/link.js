@@ -26,6 +26,12 @@ angular.module('miApp')
 			var plantilla = angular.element('<blockquote></blockquote');
 			plantilla.append(iElement.contents());
 			iElement.replaceWith(plantilla);
+			return function(scope, iElement, iAttr){
+				iElement.css('text-align', 'right');
+				if(iAttr.autor){
+					iElement.append('<br><span>Por: '+iAttr.autor+'</span>');
+				}
+			};
 		}
 	};
 }]);
