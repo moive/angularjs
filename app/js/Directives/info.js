@@ -14,15 +14,15 @@ angular.module('miApp')
 }])
 .directive('miMensaje',[function(){
 	var plantilla = '<div class="alert-{{tipo}}"';
-	plantilla += '<h2>{{titulo}}</h2><p>{{mensaje}}</p>';
-	plantilla += '<input type="text" data-ng-model="mensaje"></div>';
+	plantilla += '<h2>{{titulo}}</h2><p>{{texto}}</p>';
+	plantilla += '<input type="text" data-ng-model="texto"></div>';
 	
 	return {
 		restric: 'EA',
 		scope: {
 			tipo: '@',
 			titulo: '@',
-			mensaje: '@'
+			texto: '@mensaje'
 		},
 		template: plantilla,
 		replace: true
