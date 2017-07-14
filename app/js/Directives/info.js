@@ -27,4 +27,14 @@ angular.module('miApp')
 		template: plantilla,
 		replace: true
 	};
+}])
+.directive('miContacto',[function(){
+	return {
+		restrict: 'E',
+		scope: {
+			log: '&'
+		},
+		templateUrl: '_vistas/contacto.html',
+		replace: true
+	};
 }]);

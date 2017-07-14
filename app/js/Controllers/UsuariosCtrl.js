@@ -1,5 +1,5 @@
 angular.module('miApp')
-.controller('UsuariosCtrl',['$scope', function($scope){
+.controller('UsuariosCtrl',['$scope', '$log', function($scope, $log){
 	$scope.usuario1 = {
 		nombre: 'John',
 		apellido: 'Doe',
@@ -10,5 +10,10 @@ angular.module('miApp')
 		nombre: 'Jane',
 		apellido: 'Doe',
 		email: 'janedoe@example.com'
+	};
+	
+	$scope.log = function(elem){
+		$log.log(elem);
+		$log.log(typeof(elem));
 	};
 }]);
