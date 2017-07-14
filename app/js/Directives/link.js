@@ -18,4 +18,14 @@ angular.module('miApp')
 					}).append('<p>-- '+iAttrs.especial+'</p>');
 		}
 	};
+}])
+.directive('miCita', ['$log', function($log){
+	return {
+		restric: 'E',
+		compile: function(iElement, iAttr){
+			var plantilla = angular.element('<blockquote></blockquote');
+			plantilla.append(iElement.contents());
+			iElement.replaceWith(plantilla);
+		}
+	};
 }]);
