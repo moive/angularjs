@@ -11,6 +11,7 @@
     <div class="container">
         <h1>Filtros</h1>
         <div data-ng-controller="FiltroCtrl">
+        	<h3>Example currency</h3>
 			<div>Costo: {{1412.99 | currency}}</div>
 			<div>Costo: {{728.99 | currency: '€'}}</div>
 			<div>Costo: {{8975.258745 | currency: '€':3}}</div>
@@ -18,8 +19,14 @@
        		<div><strong ng-bind="costo"></strong></div>
        		<div><strong ng-bind="costoEuro"></strong></div>
        		<br>
+       		<h3>Example number</h3>
        		<div>{{1423.44*332.91 | number}}</div>
        		<div>{{1423.44*332.91 | number:5}}</div>
+       		<br>
+       		<h3>Example Uppercase y Lowercase</h3>
+       		<div><strong>{{"Texto de prueba" | uppercase}}</strong></div>
+       		<div><strong>{{"TEXT DE PRUEBA" | lowercase}}</strong></div>
+       		
         </div>
     </div>
     <script type="text/javascript" src="js/angular.js"></script>

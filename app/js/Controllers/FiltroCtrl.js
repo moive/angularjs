@@ -4,4 +4,5 @@ angular.module('miApp')
 	
 	$scope.costo = $filter('currency')(costo);
 	$scope.costoEuro = $filter('currency')(costo, '€', 3);
+	
 }]);
