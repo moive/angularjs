@@ -23,4 +23,15 @@ angular.module('miApp')
 			}
 		}
 	};
+}])
+.directive('miEjemplo', ['$log', function($log){
+	return {
+		restrict: 'A',
+		template: '<div>{{ctrl.mensaje}}...!</div>',
+		controllerAs: 'ctrl',
+		controller: function(){
+			this.mensaje = 'La variable mensaje está expuesta para ser utilizada';
+			this.mensaje += 'fuera del controlador y a la vez de la misma directiva.';
+		}
+	};
 }]);
