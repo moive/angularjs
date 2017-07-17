@@ -1,6 +1,6 @@
 'use-strict';
 
-angular.module('miApp', [])
+angular.module('miApp', ['ngRoute'])
 .config(['$qProvider','$logProvider', '$compileProvider', function ($qProvider,$logProvider, $compileProvider) {
             $qProvider.errorOnUnhandledRejections(false);
             $logProvider.debugEnabled(false);
