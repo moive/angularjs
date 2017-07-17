@@ -15,7 +15,7 @@ angular.module('miApp')
 .directive('otraDirectiva', [function(){
 	return {
 		restrict: 'A',
-		require: 'miDirectiva',
+		require: '^miDirectiva',
 		link: function(scope, element, attr, ctrls){
 			ctrls.log();
 		}
