@@ -26,7 +26,14 @@
        		<h3>Example Uppercase y Lowercase</h3>
        		<div><strong>{{"Texto de prueba" | uppercase}}</strong></div>
        		<div><strong>{{"TEXT DE PRUEBA" | lowercase}}</strong></div>
-       		
+       		<br>
+       		<h3>Limit to</h3>
+       		<div>
+       			<div>{{texto | limitTo: 150}}</div>
+       			<div>{{texto | limitTo: -135}}</div>
+       			<div>{{texto | limitTo: 6}}</div>
+       			<div>{{texto | limitTo: -3}}</div>
+       		</div>
         </div>
     </div>
     <script type="text/javascript" src="js/angular.js"></script>
