@@ -1,0 +1,18 @@
+[{
+	"nombre": "Maikel",
+	"apellidos": "Rivero Dorta",
+	"email": "yo@dominio.com",
+	"languajes": ["en","es"]
+},
+{
+	"nombre": "John",
+	"apellidos": "Doe",
+	"email": "johndoe@example.com",
+	"languajes": ["en"]
+},
+{
+	"nombre": "Jane",
+	"apellidos": "Doe",
+	"email": "janedoe@example.com",
+	"languajes": ["en","es"]
+}]
