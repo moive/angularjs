@@ -34,6 +34,20 @@
        			<div>{{texto | limitTo: 6}}</div>
        			<div>{{texto | limitTo: -3}}</div>
        		</div>
+       		<br>
+       		<h3>Date</h3>
+       		<div>
+       			<div>{{1409323723006 | date}}</div>
+       			<div>{{1409323723006 | date: "ww dd/MM/y hh:mm:ss a"}}</div>
+       			<div>{{1409323723006 | date: "medium"}}</div>
+       			<div>{{1409323723006 | date: "short"}}</div>
+       			<div>{{1409323723006 | date: "fullDate"}}</div>
+       			<div>{{1409323723006 | date: "longDate"}}</div>
+       			<div>{{1409323723006 | date: "mediumDate"}}</div>
+       			<div>{{1409323723006 | date: "shortDate"}}</div>
+       			<div>{{1409323723006 | date: "mediumTime"}}</div>
+       			<div>{{1409323723006 | date: "shortTime"}}</div>
+       		</div>
         </div>
     </div>
     <script type="text/javascript" src="js/angular.js"></script>
