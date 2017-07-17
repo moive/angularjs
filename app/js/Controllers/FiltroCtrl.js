@@ -1,5 +1,5 @@
 angular.module('miApp')
-.controller('FiltroCtrl', ['$scope', '$filter', function($scope, $filter){
+.controller('FiltroCtrl', ['$scope', '$filter', 'tituloFilter', function($scope, $filter, tituloFilter){
 	var costo =  1453.50;
 	
 	$scope.costo = $filter('currency')(costo);
@@ -30,4 +30,12 @@ angular.module('miApp')
 			lenguajes: ["en","es"]
 		}
 	];
+	
+	//primera forma
+	var titulo = 'este es el título de una entrada del blog2';
+	$scope.tituloCtrl = $filter('titulo')(titulo);
+	
+	//segunda forma --> inyectado tituloFilter
+	$scope.tituloFilter = tituloFilter(titulo);
+	
 }]);
