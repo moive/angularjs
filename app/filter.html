@@ -48,6 +48,22 @@
        			<div>{{1409323723006 | date: "mediumTime"}}</div>
        			<div>{{1409323723006 | date: "shortTime"}}</div>
        		</div>
+       		<br>
+       		<h3>OrderBy</h3>
+       		<table class="table">
+       			<tr>
+       				<th><strong data-ng-click="campo = 'nombre'; reverso=!reverso">Nombre</strong></th>
+       				<th><strong data-ng-click="campo = 'apellidos'; reverso=!reverso">Apellidos</strong></th>
+       				<th><strong data-ng-click="campo = 'email'; reverso=!reverso">Email</strong></th>
+       				<th><strong>Lenguajes</strong></th>
+       			</tr>
+       			<tr ng-repeat="usuario in usuarios | orderBy:campo:reverso">
+       				<td>{{usuario.nombre}}</td>
+       				<td>{{usuario.apellidos}}</td>
+       				<td>{{usuario.email}}</td>
+       				<td>{{usuario.lenguajes.join(',')}}</td>
+       			</tr>
+       		</table>
         </div>
     </div>
     <script type="text/javascript" src="js/angular.js"></script>
