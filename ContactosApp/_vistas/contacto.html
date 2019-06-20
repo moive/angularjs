@@ -1,0 +1,11 @@
+<form name="contacto" class="mt-5">
+	<div class="form-group">
+		<label for="titulo">Título: </label>
+		<input class="form-control" type="text" ng-model="titulo">
+	</div>
+	<div class="form-group">
+		<label for="mensaje">Mensaje: </label>
+		<textarea class="form-control" ng-model="mensaje"></textarea>
+	</div>
+	<button class="btn btn-primary" ng-click="log({msg: 'Titulo: ' + titulo + ' Mensaje: ' + mensaje})">Enviar</button>
+</form>

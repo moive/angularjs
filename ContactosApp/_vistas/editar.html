@@ -1,0 +1,24 @@
+<div>
+	<h3>Editando a {{contacto.nombre}}</h3>
+	<form ng-submit="guardar()" class="list-group">
+		<div class="list-group-item">
+			<label>Nombre:</label>
+			<input type="text" class="form-control" ng-model="contacto.nombre">
+		</div>
+		<div class="list-group-item">
+			<label>Email: </label>
+			<input type="text" class="form-control" ng-model="contacto.email">
+		</div>
+		<div class="list-group-item">
+			<label>Tel: </label>
+			<input type="text" class="form-control" ng-model="contacto.tel">
+		</div>
+		<div>
+			<button type="submit" class="btn btn-primary">Guardar</button>
+			<a href="" class="btn" ng-click="cancelar()"></a>
+		</div>
+		<div>
+			<a href="/">Volver</a>
+		</div>
+	</form>
+</div>

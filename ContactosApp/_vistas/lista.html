@@ -1,7 +1,15 @@
 <div>
+	<div>
+		<a href="#!/nuevo">Crear nuevo usuario</a>
+	</div>
+	<div class="mb-3 row">
+		<div class="col-sm-4">
+			<input type="text" ng-model="buscar.nombre" class="form-control">
+		</div>
+	</div>
 	<ul>
-		<li data-ng-repeat="contacto in contactos">
-			<a ng-href="#/{{$index}}">{{contacto.nombre}}</a>
+		<li ng-repeat="contacto in contactos | filter:buscar">
+			<a href="#!/{{$index}}">{{contacto.nombre}}</a>
 		</li>
 	</ul>
 </div>
