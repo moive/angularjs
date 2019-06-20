@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-strict-di ng-cloak>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title ng-bind="title"></title>
+	<base href="/">
+</head>
+<body>
+	<div class="container">
+		<div ng-view></div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.js"></script>
+	<script src="https://code.angularjs.org/1.7.8/angular-route.js"></script>
+	<script src="https://code.angularjs.org/1.7.8/angular-resource.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/Config/Bootstrap.js"></script>
+	<script src="js/Config/Routes.js"></script>
+	<script src="js/Controllers/HomeCtrl.js"></script>
+	<script src="js/Controllers/ProductsCtrl.js"></script>
+	<script src="js/Services/products.js"></script>
+	<script src="js/Services/organize.js"></script>
+</body>
+</html>

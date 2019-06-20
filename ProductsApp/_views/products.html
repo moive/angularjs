@@ -1,0 +1,28 @@
+<ul class="list-group">
+	<li class="list-group-item list-group-item-success">
+		<label for="order">Organize by: </label>
+		<select
+				name="order"
+				id="order"
+				ng-model="order"
+				ng-change="changeOrder()"
+				class="form-control"
+					ng-options="order.value as order.text for order in organize"
+
+		></select>
+	</li>
+</ul>
+<table class="table">
+	<tr>
+		<th>Name</th>
+		<th>Price</th>
+		<th>Points</th>
+		<th>Sales</th>
+	</tr>
+	<tr ng-repeat="product in products | orderBy: order">
+		<td>{{product.name}}</td>
+		<td>{{product.price}}</td>
+		<td>{{product.points}}</td>
+		<td>{{product.sales}}</td>
+	</tr>
+</table>
