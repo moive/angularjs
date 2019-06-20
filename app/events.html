@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="miApp" ng-strict-di ng-cloak>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title ng-bind="title"></title>
+	<base href="/">
+</head>
+<body>
+	<div class="container">
+		<div ng-controller="FatherCtrl">
+			<h3>Scope Father</h3>
+			<div>
+				<strong ng-bind="msgChild"></strong>
+			</div>
+			<button class="btn btn-secondary" type="button" ng-click="click()">Send(child)</button>
+			<hr>
+			<div ng-controller="ChildCtrl">
+				<h4>Scope Child</h4>
+				<div><em ng-bind="msgParent"></em></div>
+				<button class="btn btn-success" type="button" ng-click="click()">Send(parent)</button>
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.js"></script>
+	<script src="https://code.angularjs.org/1.7.8/angular-route.js"></script>
+	<script src="https://code.angularjs.org/1.7.8/angular-resource.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/Controllers/FatherCtrl.js"></script>
+	<script src="js/Controllers/ChildCtrl.js"></script>
+</body>
+</html>
